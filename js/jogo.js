@@ -43,7 +43,7 @@ let som = {
 
 function preload() {
     // --- Imagens Gerais
-    img.vidas = loadImage('assets/life.png');
+    img.vidas = loadImage('../assets/life.png');
     img.som = loadImage('assets/velocidade-1.png.png');
     // --- Imagens Nível 1
     img.nivel1.background.push(loadImage('assets/background1.png'));
