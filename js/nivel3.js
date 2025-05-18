@@ -94,12 +94,20 @@ async function setupNivel3() {
 
 function drawNivel3() {
     background(255);
-    // Desenhar Background
+    // Som
+    //if ((nv3.estado === 2 || nv3.estado === 3) && som.nivel3.isPlaying()) {
+    //som.nivel3.stop();
+    //}
+
+    //if (nv3.estado === 1 && somButton.active && !som.nivel3.isPlaying()) {
+     //som.nivel2.loop();
+
+    //}
     for (let i = 0; i < nv3.background.nBack; i++) {
         image(img.nivel3.background,
             nv3.background.x + i * img.nivel3.background.width, 0);
     }
-    // Vidas
+    //Vidas
     for (let i = 0; i < nv3.vidas; i++) {
         image(img.vidas, img.vidas.width * i, 0);
     }

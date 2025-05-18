@@ -44,7 +44,8 @@ let som = {
 function preload() {
     // --- Imagens Gerais
     img.vidas = loadImage('assets/life.png');
-    img.som = loadImage('assets/velocidade-1.png.png');
+    img.semsom = loadImage('assets/semsom.png');
+    img.som = loadImage('assets/comsom.png');
     // --- Imagens Nível 1
     img.nivel1.background.push(loadImage('assets/background1.png'));
     img.nivel1.background.push(loadImage('assets/background2.png'));
@@ -73,14 +74,26 @@ function preload() {
     // Aliados
     img.nivel3.aliados.push(loadImage('assets/soldado2.png'));
     img.nivel3.aliados.push(loadImage('assets/bubba.png'));
+    // Controlos
+    imgControles = loadImage("assets/controlos.png");
+    img.info = loadImage("assets/info.png");
     // --- Sons
     som.bomba = loadSound('assets/bomba.mp3');
+    som.bomba.setVolume(0.3);
+    som.nivel1 = loadSound('assets/perseguiçao.mp3');
+    som.forrestmenu = loadSound('assets/forrestmenu.mp3');
+    som.nivel2 = loadSound('assets/jogo.mp3');
+    som.nivel3 = loadSound('assets/guerra.mp3');
 }
 
 async function setup() {
     createCanvas(920, 430);
     img.vidas.resize(0, height / 15);
     img.som.resize(0, height / 15);
+    img.semsom.resize(0, height / 15);
+    imgControles.resize(0, height / 2);
+    img.info.resize(0, height / 15);
+
     setupMenu();
     // Nivel 1
     await resizeNivel1();
@@ -118,12 +131,12 @@ function mouseClicked() {
         clickNivel3();
     }
 
-    if(somButton.clicked()) {
+    if (somButton.clicked()) {
         somButton.active = !somButton.active;
-        if(somButton.active) {
-            somButton.img = img.vidas;
-        } else {
+        if (somButton.active) {
             somButton.img = img.som;
+        } else {
+            somButton.img = img.semsom;
         }
     }
 }
@@ -155,7 +168,7 @@ function hideVideo() {
     videoContainer.style.display = 'none';
 }
 
-video.addEventListener('ended', function() {
+video.addEventListener('ended', function () {
     video.currentTime = 0;
     hideVideo();
 });

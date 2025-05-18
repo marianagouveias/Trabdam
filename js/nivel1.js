@@ -88,6 +88,14 @@ async function setupNivel1() {
 
 function drawNivel1() {
     background(255);
+    // Som
+    if ((nv1.estado === 2 || nv1.estado === 3) && som.nivel1.isPlaying()) {
+        som.nivel1.stop();
+    }
+
+    if (somButton.active && !som.nivel1.isPlaying() && nv1.estado === 1) {
+        som.nivel1.loop();
+    }
     // Desenhar Background
     for (let i = 0; i < nv1.background.nBack1; i++) {
         image(img.nivel1.background[0],
@@ -95,6 +103,7 @@ function drawNivel1() {
     }
     image(img.nivel1.background[1],
         nv1.background.x + nv1.background.nBack1 * img.nivel1.background[0].width, 0);
+
     // Vidas
     for (let i = 0; i < nv1.vidas; i++) {
         image(img.vidas, img.vidas.width * i, 0);

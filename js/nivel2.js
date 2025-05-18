@@ -107,6 +107,16 @@ function drawNivel2() {
         image(img.nivel2.background[1], nv2.background.x + img.nivel2.background[0].width + img.nivel2.background[1].width * i, 0);
     }
     image(img.nivel2.background[2], nv2.background.x + img.nivel2.background[0].width + img.nivel2.background[1].width * nv2.background.nBack2, 0);
+    //Som
+    if ((nv2.estado === 2 || nv2.estado === 3) && som.nivel2.isPlaying()) {
+        som.nivel2.stop();
+    }
+
+    if (somButton.active && !som.nivel2.isPlaying() && nv2.estado === 1) {
+        som.nivel2.loop();
+
+    }
+
     // Vidas
     for (let i = 0; i < nv2.vidas; i++) {
         image(img.vidas, img.vidas.width * i, 0);
