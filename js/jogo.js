@@ -43,38 +43,38 @@ let som = {
 
 function preload() {
     // --- Imagens Gerais
-    img.vidas = loadImage('/assets/life.png');
-    img.som = loadImage('/assets/velocidade-1.png.png');
+    img.vidas = loadImage('assets/life.png');
+    img.som = loadImage('assets/velocidade-1.png.png');
     // --- Imagens Nível 1
-    img.nivel1.background.push(loadImage('/assets/background1.png'));
-    img.nivel1.background.push(loadImage('/assets/background2.png'));
+    img.nivel1.background.push(loadImage('assets/background1.png'));
+    img.nivel1.background.push(loadImage('assets/background2.png'));
     // Personagem
-    img.nivel1.personagem.idle = loadImage('/assets/idle.png');
-    img.nivel1.personagem.jump = loadImage('/assets/jump.png');
-    img.nivel1.personagem.walkFull = loadImage('/assets/walk.png');
+    img.nivel1.personagem.idle = loadImage('assets/idle.png');
+    img.nivel1.personagem.jump = loadImage('assets/jump.png');
+    img.nivel1.personagem.walkFull = loadImage('assets/walk.png');
     // Carro
-    img.nivel1.carro = loadImage('/assets/car_small.png');
+    img.nivel1.carro = loadImage('assets/car_small.png');
     // --- Imagens Nível 2
-    img.nivel2.background.push(loadImage('/assets/campo1.png'));
-    img.nivel2.background.push(loadImage('/assets/campo2.png'));
-    img.nivel2.background.push(loadImage('/assets/campo3.png'));
+    img.nivel2.background.push(loadImage('assets/campo1.png'));
+    img.nivel2.background.push(loadImage('assets/campo2.png'));
+    img.nivel2.background.push(loadImage('assets/campo3.png'));
     // Personagem
-    img.nivel2.personagem.idle = loadImage('/assets/parado.png');
-    img.nivel2.personagem.walkFull = loadImage('/assets/run.png');
+    img.nivel2.personagem.idle = loadImage('assets/parado.png');
+    img.nivel2.personagem.walkFull = loadImage('assets/run.png');
     // Inimigo
-    img.nivel2.inimigo.walkFull = loadImage('/assets/advrun.png');
+    img.nivel2.inimigo.walkFull = loadImage('assets/advrun.png');
     // --- Imagens Nível 3
-    img.nivel3.background = loadImage('/assets/floresta.png');
-    img.nivel3.bomba = loadImage('/assets/bomba.png');
-    img.nivel3.explosao = loadImage('/assets/explosion.png');
+    img.nivel3.background = loadImage('assets/floresta.png');
+    img.nivel3.bomba = loadImage('assets/bomba.png');
+    img.nivel3.explosao = loadImage('assets/explosion.png');
     // Personagem
-    img.nivel3.personagem.idle = loadImage('/assets/solidle.png');
-    img.nivel3.personagem.walkFull = loadImage('/assets/solwalk.png');
+    img.nivel3.personagem.idle = loadImage('assets/solidle.png');
+    img.nivel3.personagem.walkFull = loadImage('assets/solwalk.png');
     // Aliados
-    img.nivel3.aliados.push(loadImage('/assets/soldado2.png'));
-    img.nivel3.aliados.push(loadImage('/assets/bubba.png'));
+    img.nivel3.aliados.push(loadImage('assets/soldado2.png'));
+    img.nivel3.aliados.push(loadImage('assets/bubba.png'));
     // --- Sons
-    som.bomba = loadSound('/assets/bomba.mp3');
+    som.bomba = loadSound('assets/bomba.mp3');
 }
 
 async function setup() {
